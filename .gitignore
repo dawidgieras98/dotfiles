@@ -22,3 +22,4 @@ monitors.xml
 pavucontrol.ini
 user-dirs.dirs
 user-dirs.locale
+go/telemetry/local
