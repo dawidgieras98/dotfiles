@@ -31,8 +31,8 @@ local colors = {
 	tab_bar = {
 		background = "#000000",
 		active_tab = {
-			bg_color = "#1f1d2e",
-			fg_color = "#e0def4",
+			fg_color = "#1f1d2e",
+			bg_color = "#367894",
 			intensity = "Bold",
 		},
 		inactive_tab = {
