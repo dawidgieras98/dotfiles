@@ -1,0 +1,127 @@
+* {
+    font-family: 'Noto Sans Mono', 'Font Awesome 6 Free', 'Font Awesome 6 Brands', monospace;
+    font-size: 13px;
+    color: #e6e6e6;
+}
+
+window#waybar {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* Workspace buttons */
+#workspaces {
+    margin: 0 8px;
+}
+
+#workspaces button {
+    padding: 4px 10px;
+    margin: 0 4px;
+    border-radius: 10px;
+    background: rgba(100, 114, 125, 0.25);
+    transition: background 0.2s ease;
+}
+
+#workspaces button.focused {
+    background: rgba(120, 160, 255, 0.35);
+    color: white;
+}
+
+#workspaces button.activated {
+    background: rgba(100, 114, 125, 0.85);
+}
+
+#workspaces button.urgent {
+    background-color: rgba(255, 80, 80, 0.5);
+    color: white;
+}
+
+#workspaces button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Common style for modules to create "islands" */
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#tray,
+#language {
+    padding: 4px 10px;
+    margin: 4px 6px;
+    border-radius: 12px;
+    background: rgba( 54, 120, 148 , 0.85); /* unified color #2b5e74 */
+    color: #ffffff;
+}
+
+/* Power profile remains styled separately */
+#power-profiles-daemon {
+    padding: 4px 10px;
+    margin: 4px 6px;
+    border-radius: 12px;
+}
+
+#power-profiles-daemon.performance {
+    background: rgba(255, 80, 80, 0.5);
+}
+
+#power-profiles-daemon.balanced {
+    background: rgba(49, 116, 143, 0.7);
+}
+
+#power-profiles-daemon.power-saver {
+    background: rgba(120, 200, 120, 0.3);
+    color: #111;
+}
+
+/* Status-specific overrides */
+#battery.charging {
+    background: rgba(120, 200, 120, 0.3);
+}
+
+#battery.critical:not(.charging) {
+    background: rgba(255, 100, 100, 0.8);
+    color: #ffffff;
+}
+
+#network.disconnected {
+    background: rgba(255, 100, 100, 0.8);
+    color: #ffffff;
+}
+
+#pulseaudio.muted {
+    background: rgba(100, 100, 100, 0.3);
+    color: #cccccc;
+}
+
+#idle_inhibitor.activated {
+    background: rgba(240, 240, 240, 0.6);
+    color: #2a2a2a;
+}
+
+#language {
+    min-width: 20px;
+    padding: 4px 8px;
+}
+
+/* System tray styling */
+#tray {
+    color: #222;
+}
+
+#tray > .passive {
+    opacity: 0.6;
+}
+
+#tray > .needs-attention {
+    background-color: rgba(255, 100, 100, 0.8);
+    border-radius: 6px;
+    color: #000000;
+}
+

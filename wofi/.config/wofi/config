@@ -1,0 +1,13 @@
+show-icons=true
+prompt=Search:
+location=center
+columns=5
+allow-markup=true
+hide-scroll=true
+no-actions=true
+term=wezterm
+pre-display-cmd=true
+insensitive=true
+allow-markup=true
+allow-images=true
+gtk-dark=true
