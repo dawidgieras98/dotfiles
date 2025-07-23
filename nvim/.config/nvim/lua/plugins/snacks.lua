@@ -1,6 +1,21 @@
 return {
-  "snacks.nvim",
+  "folke/snacks.nvim",
+  ---@type snacks.Config
   opts = {
+    image = { enabled = true },
+    picker = {
+      sources = {
+        files = { ignored = true, hidden = true },
+        explorer = { ignored = true, hidden = true },
+        grep = { ignored = true, hidden = true },
+        grep_word = { ignored = true, hidden = true },
+        grep_buffers = { ignored = true, hidden = true },
+      },
+    },
+    explorer = {
+      ignored = true,
+      hidden = true,
+    },
     dashboard = {
       preset = {
         pick = function(cmd, opts)
