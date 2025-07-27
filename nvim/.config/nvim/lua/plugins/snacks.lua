@@ -1,3 +1,5 @@
+local patternsToExclude = { "**/node_modules/*", "**/vendor/*" }
+
 return {
   "folke/snacks.nvim",
   ---@type snacks.Config
@@ -5,11 +7,11 @@ return {
     image = { enabled = true },
     picker = {
       sources = {
-        files = { ignored = true, hidden = true },
-        explorer = { ignored = true, hidden = true },
-        grep = { ignored = true, hidden = true },
-        grep_word = { ignored = true, hidden = true },
-        grep_buffers = { ignored = true, hidden = true },
+        files = { exclude = patternsToExclude, ignored = true, hidden = true },
+        explorer = { exclude = patternsToExclude, ignored = true, hidden = true },
+        grep = { exclude = patternsToExclude, ignored = true, hidden = true },
+        grep_word = { exclude = patternsToExclude, ignored = true, hidden = true },
+        grep_buffers = { exclude = patternsToExclude, ignored = true, hidden = true },
       },
     },
     explorer = {
