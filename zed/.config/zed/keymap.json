@@ -58,7 +58,6 @@
     "context": "(GitPanel && ChangesList)",
     "bindings": {
       "g r": ["git::RestoreFile", { "skip_prompt": true }],
-      "g u": "git::Push",
       "g c": "git::Commit"
     }
   },
