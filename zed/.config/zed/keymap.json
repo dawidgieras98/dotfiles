@@ -1,0 +1,42 @@
+[
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space t t": "terminal_panel::ToggleFocus",
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp",
+      "g ]": "editor::GoToDiagnostic",
+      "g [": "editor::GoToPreviousDiagnostic",
+      "g r": "editor::FindAllReferences",
+      "shift-d": "editor::Hover",
+      "space l a": "editor::ToggleCodeActions",
+      "space l r": "editor::Rename",
+      "space c f": "editor::Format",
+      "space l l": "diagnostics::Deploy",
+      "g c c": "editor::ToggleComments",
+      "space space": "file_finder::Toggle",
+      "space /": "pane::DeploySearch",
+      "space o": "tab_switcher::Toggle",
+      "space e": "workspace::ToggleRightDock",
+      "space p": "outline::Toggle",
+      "space g g": "workspace::ToggleLeftDock",
+      "space d s": "editor::GoToDefinitionSplit"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "j j": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {}
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "space t t": "terminal_panel::ToggleFocus"
+    }
+  }
+]
