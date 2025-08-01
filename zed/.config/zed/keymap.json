@@ -79,5 +79,13 @@
         }
       ]
     }
+  },
+  {
+    // Context for when the tab switcher is active
+    "context": "TabSwitcher",
+    "bindings": {
+      "j": "menu::SelectNext",
+      "k": "menu::SelectPrevious"
+    }
   }
 ]
