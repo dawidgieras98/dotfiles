@@ -17,7 +17,7 @@
       "g c c": "editor::ToggleComments",
       "space space": "file_finder::Toggle",
       "space /": "pane::DeploySearch",
-      "space o": "tab_switcher::Toggle",
+      "space o": "tab_switcher::ToggleAll",
       "space e": "workspace::ToggleRightDock",
       "space p": "outline::Toggle",
       "space g g": "workspace::ToggleLeftDock",
@@ -81,11 +81,11 @@
     }
   },
   {
-    // Context for when the tab switcher is active
+    // Context for when the tab switcher is active !!! UNCOMMENT ONLY WHEN USING REGULAR TAB SWITCHER NOT OPTION WITH "ToggleAll"
     "context": "TabSwitcher",
     "bindings": {
-      "j": "menu::SelectNext",
-      "k": "menu::SelectPrevious"
+      // "j": "menu::SelectNext",
+      // "k": "menu::SelectPrevious"
     }
   }
 ]
