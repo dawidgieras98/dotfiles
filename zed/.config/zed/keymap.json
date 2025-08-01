@@ -1,5 +1,6 @@
 [
   {
+    // Context: General editor mode with Vim controls; not waiting for Vim or menu input
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       "space t t": "terminal_panel::ToggleFocus",
@@ -24,16 +25,28 @@
     }
   },
   {
+    // Context: Editor mode when in Vim's insert mode and not showing a menu
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
       "j j": "vim::NormalBefore"
     }
   },
   {
+    // Context: Editor mode when in Vim's visual mode, not waiting for input or handling an object
     "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
     "bindings": {}
   },
   {
+    // Context for when no files are open
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space /": "pane::DeploySearch",
+      "space e": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    // Context: Terminal within the editor
     "context": "Terminal",
     "bindings": {
       "space t t": "terminal_panel::ToggleFocus"
