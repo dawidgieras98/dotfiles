@@ -2,7 +2,7 @@
   "icon_theme": "JetBrains Icons Dark",
   "lsp_document_colors": "inlay",
   "inline_code_actions": true,
- "minimap": {
+  "minimap": {
     "show": "never"
   },
   "search": {
