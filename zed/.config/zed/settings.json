@@ -18,6 +18,9 @@
     "quick_actions": false,
     "selections_menu": false
   },
+  "tabs": {
+    "file_icons": true
+  },
   "ui_font_family": "Monaspace Neon",
   "buffer_font_family": "Monaspace Neon",
   "hide_mouse": "on_typing_and_movement",

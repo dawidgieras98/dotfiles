@@ -28,7 +28,8 @@
     // Context: Editor mode when in Vim's insert mode and not showing a menu
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
-      "j j": "vim::NormalBefore"
+      "j j": "vim::NormalBefore",
+      "space c": "editor::ShowCompletions"
     }
   },
   {
@@ -86,6 +87,12 @@
     "bindings": {
       // "j": "menu::SelectNext",
       // "k": "menu::SelectPrevious"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "\\": "pane::ActivateNextItem"
     }
   }
 ]
