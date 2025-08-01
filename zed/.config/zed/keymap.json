@@ -29,7 +29,7 @@
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
       "j j": "vim::NormalBefore",
-      "space c": "editor::ShowCompletions"
+      "c c": "editor::ShowCompletions"
     }
   },
   {
