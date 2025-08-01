@@ -58,7 +58,8 @@
     "context": "(GitPanel && ChangesList)",
     "bindings": {
       "g r": ["git::RestoreFile", { "skip_prompt": true }],
-      "g c": "git::Commit"
+      "g c": "git::Commit",
+      "g u": "git::Push"
     }
   },
   {
@@ -67,17 +68,6 @@
     "bindings": {
       "space g f": "git::Fetch",
       "space g p": "git::Pull"
-    }
-  },
-  {
-    "context": "(GitPanel && ChangesList)",
-    "bindings": {
-      "ctrl-delete": [
-        "git::RestoreFile",
-        {
-          "skip_prompt": false
-        }
-      ]
     }
   },
   {
