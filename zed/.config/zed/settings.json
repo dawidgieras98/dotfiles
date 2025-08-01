@@ -6,6 +6,7 @@
     "show": "never"
   },
   "search": {
+    "include_ignored": true,
     "button": false,
     "case_sensitive": true
   },

@@ -18,9 +18,9 @@
       "space space": "file_finder::Toggle",
       "space /": "pane::DeploySearch",
       "space o": "tab_switcher::ToggleAll",
-      "space e": "workspace::ToggleRightDock",
       "space p": "outline::Toggle",
-      "space g g": "workspace::ToggleLeftDock",
+      "space g g": "workspace::ActivatePaneLeft",
+      "space e": "workspace::ActivatePaneRight",
       "space d s": "editor::GoToDefinitionSplit"
     }
   },
@@ -89,9 +89,18 @@
     }
   },
   {
+    // Switching buffers
     "context": "Pane",
     "bindings": {
       "\\": "pane::ActivateNextItem"
+    }
+  },
+  {
+    // When using code completion and stuff like that
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "k": "editor::ContextMenuPrevious",
+      "j": "editor::ContextMenuNext"
     }
   }
 ]
