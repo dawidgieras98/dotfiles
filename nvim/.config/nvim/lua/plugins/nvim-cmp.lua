@@ -21,6 +21,7 @@ return {
     local cmp = require("cmp")
     local defaults = require("cmp.config.default")()
     local auto_select = true
+
     return {
       auto_brackets = {}, -- configure any filetype to auto add brackets
       window = {
