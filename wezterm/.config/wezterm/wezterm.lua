@@ -10,7 +10,7 @@ return {
 
 	-- Font
 	font = wezterm.font_with_fallback({
-		{ family = "MonaspiceNe NF", weight = "Light" },
+		{ family = "Monaspace Neon Var", weight = "Light" },
 		{ family = "JetBrains Mono", weight = "Regular", italic = false },
 		{ family = "Fira Code", weight = "Regular" },
 	}),
