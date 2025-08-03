@@ -133,7 +133,7 @@ return {
               "typescriptreact",
             }
 
-            -- ⚠️ Do NOT return anything here!
+            --  Do NOT return anything here!
           end,
           volar = function(_, _)
             require("lazyvim.util").lsp.on_attach(function(client, _)
@@ -151,6 +151,17 @@ return {
 
       LazyVim.lsp.on_attach(function(client, buffer)
         require("lazyvim.plugins.lsp.keymaps").on_attach(client, buffer)
+        local map = function(mode, lhs, rhs, desc)
+          vim.keymap.set(
+            mode,
+            lhs,
+            rhs,
+            { buffer = buffer, silent = true, noremap = true, desc = desc }
+          )
+        end
+        map("n", "K", ":m .-2<CR>==", "Move line up")
+        map("n", "J", ":m .+1<CR>==", "Move line down")
+        map("n", "D", vim.lsp.buf.hover, "LSP Hover")
       end)
 
       LazyVim.lsp.setup()
