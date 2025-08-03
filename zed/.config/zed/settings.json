@@ -22,8 +22,21 @@
   "tabs": {
     "file_icons": true
   },
-  "ui_font_family": "Monaspace Neon",
-  "buffer_font_family": "Monaspace Neon",
+  "ui_font_family": "Monaspace Neon Var",
+  "buffer_font_family": "Monaspace Neon Var",
+  "buffer_font_features": {
+    "liga": true,
+    "calt": true,
+    "ss01": true,
+    "ss02": true,
+    "ss03": true,
+    "ss05": true,
+    "ss06": true,
+    "ss07": true,
+    "ss08": true,
+    "ss09": true,
+    "ss10": true
+  },
   "hide_mouse": "on_typing_and_movement",
   "inlay_hints": {
     "enabled": true
@@ -96,5 +109,22 @@
     }
   },
   "wrap_guides": [90],
-  "show_wrap_guides": true
+  "show_wrap_guides": true,
+  "languages": {
+    "JavaScript": {
+      // "format_on_save": "off",
+      "formatter": "language_server"
+    },
+    "TypeScript": {
+      // "format_on_save": "off",
+      "formatter": "language_server"
+    }
+    // "Vue.js": {
+    //   // "formatter": "language_server",
+    //   // "code_actions_on_format": {
+    //   //   "source.fixAll.eslint": true
+    //   // },
+    //   "format_on_save": "off"
+    // }
+  }
 }
