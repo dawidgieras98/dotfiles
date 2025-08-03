@@ -7,7 +7,7 @@ ZSH_THEME="robbyrussell"
 # --------ALIAS-----------
 alias edit='nvim ~/.zshrc';
 alias so='source ~/.zshrc';
-alias vi='nvim .';
+alias vi='nvim';
 alias he='nvim ~/.config/hypr/hyprland.conf';
 alias copy='wl-copy < ';
 alias lg='lazygit';

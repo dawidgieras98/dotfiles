@@ -27,7 +27,7 @@ return {
   },
   keys = {
     {
-      "<leader>,",
+      "<leader>t",
       "<cmd>Telescope buffers sort_mru=true sort_lastused=true<cr>",
       desc = "Switch Buffer",
     },
