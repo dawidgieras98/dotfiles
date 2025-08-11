@@ -1,8 +1,11 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
--- Theme (Optional - preserved from your original structure)
-config.color_scheme = "Terminix Dark (Gogh)"
+-- Custome colorscheme imported from colorshceme.lua
+config.color_schemes = require("colorscheme")
+
+-- Set VibrantVague as the active color scheme
+config.color_scheme = "VibrantVague"
 
 config.max_fps = 120
 
@@ -31,8 +34,6 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
-
-config.window_background_opacity = 0.85
 
 -- Keys (split into separate module)
 config.keys = require("keys")
