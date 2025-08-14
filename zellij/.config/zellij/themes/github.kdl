@@ -1,0 +1,16 @@
+themes {
+    github {
+        fg "#c9d1d9"
+        bg "#0d1117"
+
+        black "#0d1117"
+        red "#ff7b72"
+        green "#3fb950"
+        yellow "#d29922"
+        blue "#58a6ff"
+        magenta "#ff7b72"
+        orange "#f0883e"   // pale orange
+        cyan "#f0883e"     // same pale orange for consistency
+        white "#b1bac4"
+    }
+}
