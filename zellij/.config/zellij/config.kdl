@@ -87,6 +87,8 @@ keybinds clear-defaults=true {
         bind "Ctrl x" { SwitchToMode "scroll"; }
     }
     shared_except "locked" {
+        bind "Alt q" { GoToPreviousTab; }
+        bind "Alt e" { GoToNextTab; }
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
