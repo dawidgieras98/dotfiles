@@ -9,7 +9,19 @@ config.max_fps = 120
 
 -- Font settings
 config.font = wezterm.font_with_fallback({
-	{ family = "Monaspace Neon Var", weight = "Light" },
+	{
+		family = "Monaspace Neon Var",
+		weight = "Light",
+		harfbuzz_features = {
+			"liga=1",
+			"clig=1",
+			"calt=1",
+			"ss01=1",
+			"ss03=1",
+			"ss04=1",
+			"ss06=1",
+		},
+	},
 	{ family = "JetBrains Mono", weight = "Regular", italic = false },
 	{ family = "Fira Code", weight = "Regular" },
 })
