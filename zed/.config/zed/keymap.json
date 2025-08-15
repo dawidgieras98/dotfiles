@@ -56,7 +56,6 @@
     }
   },
   {
-    // changes for sake of testing
     // Context for the left dock focused on Git operations
     "context": "(GitPanel && ChangesList)",
     "bindings": {
