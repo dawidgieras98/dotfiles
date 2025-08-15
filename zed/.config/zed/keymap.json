@@ -3,6 +3,10 @@
     // Context: General editor mode with Vim controls; not waiting for Vim or menu input
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
+      "space /": [
+        "task::Spawn",
+        { "task_name": "Find in Files", "reveal_target": "center" }
+      ],
       "space x": "projects::OpenRecent",
       "space t t": "terminal_panel::ToggleFocus",
       "shift-j": "editor::MoveLineDown",
@@ -17,7 +21,6 @@
       "space c l": "diagnostics::Deploy",
       "g c c": "editor::ToggleComments",
       "space space": "file_finder::Toggle",
-      "space /": "pane::DeploySearch",
       "space o": "tab_switcher::ToggleAll",
       "space p": "outline::Toggle",
       "space g g": "workspace::ActivatePaneLeft",
@@ -44,8 +47,11 @@
     // Context for when no files are open
     "context": "EmptyPane || SharedScreen",
     "bindings": {
+      "space /": [
+        "task::Spawn",
+        { "task_name": "Find in Files", "reveal_target": "center" }
+      ],
       "space space": "file_finder::Toggle",
-      "space /": "pane::DeploySearch",
       "space e": "workspace::ToggleRightDock"
     }
   },
@@ -53,7 +59,10 @@
     // Context: Terminal within the editor
     "context": "Terminal",
     "bindings": {
-      "space t t": "terminal_panel::ToggleFocus"
+      "space t t": "terminal_panel::ToggleFocus",
+      "alt-j": ["workspace::SendKeystrokes", "down"],
+      "alt-k": ["workspace::SendKeystrokes", "up"],
+      "q e": ["workspace::SendKeystrokes", "escape"]
     }
   },
   {
@@ -63,6 +72,12 @@
       "g r": ["git::RestoreFile", { "skip_prompt": true }],
       "g c": "git::Commit",
       "g u": "git::Push"
+    }
+  },
+  {
+    "context": "(GitCommit && Editor)",
+    "bindings": {
+      "enter enter": "git::Commit"
     }
   },
   {
@@ -76,10 +91,10 @@
   },
   {
     // Context for when the tab switcher is active !!! UNCOMMENT ONLY WHEN USING REGULAR TAB SWITCHER NOT OPTION WITH "ToggleAll"
-    "context": "TabSwitcher",
+    "context": "Workspace",
     "bindings": {
-      // "j": "menu::SelectNext",
-      // "k": "menu::SelectPrevious"
+      "alt-j": "menu::SelectNext",
+      "alt-k": "menu::SelectPrevious"
     }
   },
   {
