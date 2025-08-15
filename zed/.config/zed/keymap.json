@@ -35,7 +35,9 @@
   {
     // Context: Editor mode when in Vim's visual mode, not waiting for input or handling an object
     "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
-    "bindings": {}
+    "bindings": {
+      "space g h r": "git::Restore"
+    }
   },
   {
     // Context for when no files are open
@@ -67,7 +69,8 @@
     "context": "Editor && vim_mode == normal",
     "bindings": {
       "space g f": "git::Fetch",
-      "space g p": "git::Pull"
+      "space g p": "git::Pull",
+      "space g h r": "git::Restore"
     }
   },
   {
