@@ -75,9 +75,9 @@
     }
   },
   {
-    "context": "(GitCommit && Editor)",
+    "context": "GitCommit > Editor",
     "bindings": {
-      "enter enter": "git::Commit"
+      "g c": "git::Commit"
     }
   },
   {
