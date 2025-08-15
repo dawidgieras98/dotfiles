@@ -77,7 +77,7 @@
   {
     "context": "GitCommit",
     "bindings": {
-      "g b": "git::Commit"
+      "space g c": "git::Commit"
     }
   },
   {
