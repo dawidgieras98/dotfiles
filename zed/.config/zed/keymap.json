@@ -3,6 +3,7 @@
     // Context: General editor mode with Vim controls; not waiting for Vim or menu input
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
+      "space x": "projects::OpenRecent",
       "space t t": "terminal_panel::ToggleFocus",
       "shift-j": "editor::MoveLineDown",
       "shift-k": "editor::MoveLineUp",
