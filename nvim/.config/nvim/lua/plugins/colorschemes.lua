@@ -1,3 +1,4 @@
+-- Load default palettes
 return {
   "projekt0n/github-nvim-theme",
   name = "github-theme",
@@ -6,7 +7,7 @@ return {
   config = function()
     require("github-theme").setup({
       options = {
-        transparent = true,
+        transparent = true, -- Disable setting bg (make neovim's background transparent)
       },
     })
 

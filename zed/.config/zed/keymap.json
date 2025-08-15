@@ -79,10 +79,10 @@
     }
   },
   {
-    // Switching buffers
-    "context": "Pane",
+    "context": "Editor",
     "bindings": {
-      "\\": "pane::ActivateNextItem"
+      "alt-3": "pane::ActivateNextItem",
+      "alt-1": "pane::ActivatePreviousItem"
     }
   },
   {
