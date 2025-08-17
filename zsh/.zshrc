@@ -12,7 +12,8 @@ alias he='nvim ~/.config/hypr/hyprland.conf';
 alias copy='wl-copy < ';
 alias lg='lazygit';
 alias zel='zellij';
-
+alias kmn='shutdown now';
+alias zed-clean='XDG_CONFIG_HOME=$HOME/.config-zed-clean zed';
 
 plugins=(git zoxide)
 
