@@ -1,4 +1,11 @@
-local patternsToExclude = { "**/node_modules/*", "**/vendor/*" }
+local patternsToExclude = {
+  "**/node_modules/*",
+  "**/vendor/*",
+  "**/*~*", -- files/folders with ~ in the name
+  "**/*.swp", -- Vim swap files
+  "**/*.tmp", -- temporary files
+  "**/.DS_Store", -- optional: macOS metadata files
+}
 
 return {
   "folke/snacks.nvim",

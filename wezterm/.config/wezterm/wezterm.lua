@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 -- Theme (Optional - preserved from your original structure)
 config.color_schemes = require("colorscheme")
 
-config.color_scheme = "GitHub"
+config.color_scheme = "Catppuccin Mocha"
 config.max_fps = 120
 
 -- Font settings
@@ -44,9 +44,10 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
-
-config.window_background_opacity = 0.93
-
+config.colors = {
+	background = "#24273a",
+}
+config.window_background_opacity = 0.90
 -- Keys (split into separate module)
 config.keys = require("keys")
 

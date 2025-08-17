@@ -1,16 +1,79 @@
--- Load default palettes
+-- -- Load default palettes
+-- return {
+--   "projekt0n/github-nvim-theme",
+--   name = "github-theme",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     require("github-theme").setup({
+--       options = {
+--         transparent = true, -- Disable setting bg (make neovim's background transparent)
+--       },
+--     })
+--     vim.cmd("colorscheme github_dark_high_contrast")
+--   end,
+-- }
+
 return {
-  "projekt0n/github-nvim-theme",
-  name = "github-theme",
-  lazy = false,
+  "catppuccin/nvim",
+  name = "catppuccin",
   priority = 1000,
+  lazy = false,
   config = function()
-    require("github-theme").setup({
-      options = {
-        transparent = true, -- Disable setting bg (make neovim's background transparent)
+    require("catppuccin").setup({
+      flavour = "macchiato", -- latte, frappe, macchiato, mocha
+      background = { -- :h background
+        light = "latte",
+        dark = "mocha",
+      },
+      transparent_background = true, -- disables setting the background color.
+      float = {
+        transparent = true, -- enable transparent floating windows
+        solid = false, -- use solid styling for floating windows, see |winborder|
+      },
+      show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
+      term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
+      dim_inactive = {
+        enabled = false, -- dims the background color of inactive window
+        shade = "dark",
+        percentage = 0.15, -- percentage of the shade to apply to the inactive window
+      },
+      no_italic = false, -- Force no italic
+      no_bold = false, -- Force no bold
+      no_underline = false, -- Force no underline
+      styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+        comments = { "italic" }, -- Change the style of comments
+        conditionals = { "italic" },
+        loops = {},
+        functions = {},
+        keywords = {},
+        strings = {},
+        variables = {},
+        numbers = {},
+        booleans = {},
+        properties = {},
+        types = {},
+        operators = {},
+        -- miscs = {}, -- Uncomment to turn off hard-coded styles
+      },
+      color_overrides = {},
+      custom_highlights = {},
+      default_integrations = true,
+      auto_integrations = false,
+      integrations = {
+        cmp = true,
+        gitsigns = true,
+        nvimtree = true,
+        treesitter = true,
+        notify = true,
+        mini = {
+          enabled = true,
+          indentscope_color = "",
+        },
       },
     })
 
-    vim.cmd("colorscheme github_dark_tritanopia")
+    -- setup must be called before loading
+    vim.cmd.colorscheme("catppuccin")
   end,
 }

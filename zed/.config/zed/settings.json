@@ -1,7 +1,22 @@
 {
+  "snippet_sort_order": "top",
+  "show_edit_predictions": false,
+  "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
+    }
+  },
+  "edit_predictions": {
+    "mode": "subtle",
+    "enabled_in_text_threads": false
+  },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "inline_code_actions": true,
   "icon_theme": "JetBrains Icons Dark",
   "lsp_document_colors": "inlay",
-  "inline_code_actions": true,
   "minimap": {
     "show": "never"
   },
@@ -16,10 +31,11 @@
   },
   "toolbar": {
     "breadcrumbs": true,
-    "quick_actions": false,
-    "selections_menu": false
+    "quick_actions": true,
+    "selections_menu": true
   },
   "tabs": {
+    "show_diagnostics": "all",
     "file_icons": true
   },
   "ui_font_family": "Monaspace Neon Var",
@@ -39,7 +55,10 @@
   },
   "hide_mouse": "on_typing_and_movement",
   "inlay_hints": {
-    "enabled": true
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
   },
   "theme": "Github Dark Tritanopia",
   "telemetry": {
@@ -75,32 +94,6 @@
   },
   "vim": {
     "use_system_clipboard": "always"
-  },
-  "lsp": {
-    "gopls": {
-      "initialization_options": {
-        "gofumpt": true,
-        "usePlaceholders": true,
-        "staticcheck": true,
-        "codelenses": {
-          "gc_details": true,
-          "generate": true,
-          "regenerate_cgo": true,
-          "tidy": true,
-          "upgrade_dependency": true,
-          "vendor": true
-        },
-        "hints": {
-          "assignVariableTypes": true,
-          "compositeLiteralFields": true,
-          "compositeLiteralTypes": true,
-          "functionTypeParameters": true,
-          "constantValues": true,
-          "parameterNames": false,
-          "rangeVariableTypes": true
-        }
-      }
-    }
   },
   "wrap_guides": [90],
   "show_wrap_guides": true
