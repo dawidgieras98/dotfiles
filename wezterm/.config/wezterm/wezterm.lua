@@ -45,7 +45,7 @@ config.window_padding = {
 	bottom = 0,
 }
 config.colors = {
-	background = "#24273a",
+	background = "#1a1c2a",
 }
 config.window_background_opacity = 0.90
 -- Keys (split into separate module)
