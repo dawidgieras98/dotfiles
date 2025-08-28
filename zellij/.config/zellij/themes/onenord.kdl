@@ -1,0 +1,27 @@
+themes {
+  theme "onenord" {
+    fg "#C8D0E0"
+    bg "#2E3440"
+
+    black "#3B4252"
+    red "#BF616A"
+    green "#A3BE8C"
+    yellow "#EBCB8B"
+    blue "#81A1C1"
+    magenta "#B988B0"
+    cyan "#88C0D0"
+    white "#E5E9F0"
+
+    bright_black "#4C566A"
+    bright_red "#BF616A"
+    bright_green "#A3BE8C"
+    bright_yellow "#EBCB8B"
+    bright_blue "#81A1C1"
+    bright_magenta "#B988B0"
+    bright_cyan "#8FBCBB"
+    bright_white "#ECEFF4"
+
+    cursor "#81A1C1"
+    selection "#3F4758"
+  }
+}

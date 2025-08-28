@@ -1,59 +1,34 @@
 return {
-	["GitHub"] = {
-		foreground = "#c9d1d9",
-		background = "#0d1117",
-		cursor_bg = "#c9d1d9",
-		cursor_border = "#c9d1d9",
-		cursor_fg = "#0d1117",
-		selection_bg = "#484f58",
-		selection_fg = "#c9d1d9",
+	["OneNord"] = {
+		foreground = "#E5E9F0",
+		background = "#2E3440",
+		cursor_bg = "#ECEFF4",
+		cursor_fg = "#2E3440",
+		cursor_border = "#ECEFF4",
+		selection_fg = "#D8DEE9",
+		selection_bg = "#4C566A",
+		scrollbar_thumb = "#4C566A",
+		split = "#3B4252",
 
 		ansi = {
-			"#484f58", -- black
-			"#ff7b72", -- red
-			"#58a6ff", -- green
-			"#d29922", -- yellow
-			"#58a6ff", -- blue
-			"#bc8cff", -- magenta
-			"#f2a066", -- cyan
-			"#b1bac4", -- white
+			"#3B4252", -- black
+			"#BF616A", -- red
+			"#A3BE8C", -- green
+			"#EBCB8B", -- yellow
+			"#81A1C1", -- blue
+			"#B48EAD", -- magenta
+			"#88C0D0", -- cyan
+			"#E5E9F0", -- white
 		},
-
 		brights = {
-			"#6e7681", -- bright black
-			"#ff7b72", -- bright red
-			"#79c0ff", -- bright green
-			"#e3b341", -- bright yellow
-			"#79c0ff", -- bright blue
-			"#bc8cff", -- bright magenta
-			"#f2a066", -- bright cyan
-			"#b1bac4", -- bright white
-		},
-
-		tab_bar = {
-			background = "#0d1117",
-			active_tab = {
-				bg_color = "#484f58",
-				fg_color = "#c9d1d9",
-				intensity = "Normal",
-			},
-			inactive_tab = {
-				bg_color = "#0d1117",
-				fg_color = "#6e7681",
-			},
-			inactive_tab_hover = {
-				bg_color = "#484f58",
-				fg_color = "#c9d1d9",
-				italic = true,
-			},
-			new_tab = {
-				bg_color = "#0d1117",
-				fg_color = "#6e7681",
-			},
-			new_tab_hover = {
-				bg_color = "#484f58",
-				fg_color = "#c9d1d9",
-			},
+			"#4C566A", -- bright black
+			"#BF616A", -- bright red
+			"#A3BE8C", -- bright green
+			"#EBCB8B", -- bright yellow
+			"#81A1C1", -- bright blue
+			"#B48EAD", -- bright magenta
+			"#8FBCBB", -- bright cyan
+			"#ECEFF4", -- bright white
 		},
 	},
 }

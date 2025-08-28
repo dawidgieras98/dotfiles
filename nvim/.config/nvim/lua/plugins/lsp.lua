@@ -159,8 +159,8 @@ return {
             { buffer = buffer, silent = true, noremap = true, desc = desc }
           )
         end
-        -- map("n", "K", ":m .-2<CR>==", "Move line up")
-        -- map("n", "J", ":m .+1<CR>==", "Move line down")
+        -- map("n", "<A-k>", ":m .-2<CR>==", "Move line up")
+        -- map("n", "<A-j>", ":m .+1<CR>==", "Move line down")
         map("n", "D", vim.lsp.buf.hover, "LSP Hover")
       end)
 

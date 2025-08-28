@@ -1,4 +1,7 @@
+export ZSH="$HOME/.oh-my-zsh"
+
 # -------- ALIASES ----------
+
 alias edit='nvim ~/.zshrc'
 alias so='source ~/.zshrc'
 alias vi='nvim'
@@ -8,6 +11,8 @@ alias lg='lazygit'
 alias zel='zellij'
 alias kmn='shutdown now'
 alias zed-clean='XDG_CONFIG_HOME=$HOME/.config-zed-clean zed'
+
+ZSH_THEME="robbyrussell"
 
 # -------- TOOLS ------------
 # zoxide
@@ -25,5 +30,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$PATH:$HOME/go/bin
 
-# -------- STARSHIP ----------
-eval "$(starship init zsh)"
+source $ZSH/oh-my-zsh.sh

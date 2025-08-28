@@ -1,79 +1,68 @@
--- -- Load default palettes
--- return {
---   "projekt0n/github-nvim-theme",
---   name = "github-theme",
---   lazy = false,
---   priority = 1000,
---   config = function()
---     require("github-theme").setup({
---       options = {
---         transparent = true, -- Disable setting bg (make neovim's background transparent)
---       },
---     })
---     vim.cmd("colorscheme github_dark_high_contrast")
---   end,
--- }
-
 return {
-  "catppuccin/nvim",
-  name = "catppuccin",
-  priority = 1000,
-  lazy = false,
-  config = function()
-    require("catppuccin").setup({
-      flavour = "macchiato", -- latte, frappe, macchiato, mocha
-      background = { -- :h background
-        light = "latte",
-        dark = "mocha",
-      },
-      transparent_background = true, -- disables setting the background color.
-      float = {
-        transparent = true, -- enable transparent floating windows
-        solid = false, -- use solid styling for floating windows, see |winborder|
-      },
-      show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-      term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
-      dim_inactive = {
-        enabled = false, -- dims the background color of inactive window
-        shade = "dark",
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
-      },
-      no_italic = false, -- Force no italic
-      no_bold = false, -- Force no bold
-      no_underline = false, -- Force no underline
-      styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-        comments = { "italic" }, -- Change the style of comments
-        conditionals = { "italic" },
-        loops = {},
-        functions = {},
-        keywords = {},
-        strings = {},
-        variables = {},
-        numbers = {},
-        booleans = {},
-        properties = {},
-        types = {},
-        operators = {},
-        -- miscs = {}, -- Uncomment to turn off hard-coded styles
-      },
-      color_overrides = {},
-      custom_highlights = {},
-      default_integrations = true,
-      auto_integrations = false,
-      integrations = {
-        cmp = true,
-        gitsigns = true,
-        nvimtree = true,
-        treesitter = true,
-        notify = true,
-        mini = {
-          enabled = true,
-          indentscope_color = "",
+  {
+    "rmehri01/onenord.nvim",
+    lazy = false, -- load on startup
+    priority = 1000, -- make sure it loads before other plugins
+    config = function()
+      require("onenord").setup({
+        theme = "dark", -- "dark" or "light"
+        borders = true,
+        fade_nc = false,
+        disable = {
+          background = false, -- keep background transparent if true
         },
-      },
-    })
-
-    -- setup must be called before loading
-    vim.cmd.colorscheme("catppuccin")
-  end,
+      })
+      vim.cmd.colorscheme("onenord")
+    end,
+  },
+  -- {
+  --   "sainnhe/everforest",
+  --   lazy = false, -- load immediately
+  --   priority = 1000, -- make sure it loads before other plugins
+  --   config = function()
+  --     -- Example Everforest setup
+  --     vim.g.everforest_background = "soft" -- options: 'hard', 'medium', 'soft'
+  --     vim.g.everforest_enable_italic = true
+  --     vim.g.everforest_transparent_background = 0 -- 1 for transparent, 0 for solid
+  --
+  --     -- vim.cmd.colorscheme("everforest")
+  --   end,
+  -- },
+  -- {
+  --   "everviolet/nvim",
+  --   name = "evergarden",
+  --   priority = 1000, -- Colorscheme plugin is loaded first before any other plugins
+  --   opts = {
+  --     theme = {
+  --       variant = "fall", -- 'winter'|'fall'|'spring'|'summer'
+  --       accent = "green",
+  --     },
+  --     editor = {
+  --       transparent_background = false,
+  --       sign = { color = "none" },
+  --       float = {
+  --         color = "mantle",
+  --         solid_border = false,
+  --       },
+  --       completion = {
+  --         color = "surface0",
+  --       },
+  --     },
+  --   },
+  -- },
+  --
+  -- {
+  --   {
+  --     "xfyuan/nightforest.nvim",
+  --     lazy = false,
+  --     priority = 1000,
+  --     config = function()
+  --       require("nightforest").setup({
+  --         midnight = false, -- true = głębszy tryb nocny
+  --         overrides = {}, -- możesz tu wstawiać custom highlighty
+  --       })
+  --       vim.cmd.colorscheme("nightforest")
+  --     end,
+  --   },
+  -- },
 }
