@@ -4,18 +4,24 @@ local config = wezterm.config_builder()
 -- Theme (Optional - preserved from your original structure)
 config.color_schemes = require("colorscheme")
 
-config.color_scheme = "nord"
+config.color_scheme = "KittyPastel"
 config.max_fps = 120
-
+config.cell_width = 1.0
+config.line_height = 1.0
+config.font_shaper = "Harfbuzz"
+config.harfbuzz_features = {
+	"calt=1",
+}
 -- Font settings
 config.font = wezterm.font_with_fallback({
+	{ family = "JetBrainsMono NF", weight = "Regular" },
+	{ family = "Fira Code", weight = "Light" },
+	{ family = "JetBrains Mono", weight = "Light", italic = true },
 	{
 		family = "Monaspace Neon Var",
 		weight = "Light",
 		harfbuzz_features = { "liga=1", "clig=1", "calt=1", "ss01=1", "ss03=1", "ss04=1", "ss06=1" },
 	},
-	{ family = "Fira Code", weight = "Regular" },
-	{ family = "JetBrains Mono", weight = "Light", italic = true },
 })
 config.font_size = 19.0
 config.line_height = 1.0
@@ -28,7 +34,8 @@ config.enable_tab_bar = true
 config.hide_tab_bar_if_only_one_tab = true
 config.use_fancy_tab_bar = false
 config.tab_max_width = 25
-
+config.send_composed_key_when_left_alt_is_pressed = false
+config.send_composed_key_when_right_alt_is_pressed = true
 -- Window
 config.window_padding = {
 	left = 0,

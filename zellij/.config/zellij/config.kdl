@@ -87,29 +87,28 @@ keybinds clear-defaults=true {
         bind "Ctrl x" { SwitchToMode "scroll"; }
     }
     shared_except "locked" {
-        bind "Alt q" { GoToPreviousTab; }
-        bind "Alt e" { GoToNextTab; }
+        bind "Ctrl q" { GoToPreviousTab; }
+        bind "Ctrl e" { GoToNextTab; }
         bind "Alt left" { MoveFocusOrTab "left"; }
         bind "Alt down" { MoveFocus "down"; }
         bind "Alt up" { MoveFocus "up"; }
         bind "Alt right" { MoveFocusOrTab "right"; }
-        bind "Alt +" { Resize "Increase"; }
-        bind "Alt -" { Resize "Decrease"; }
-        bind "Alt =" { Resize "Increase"; }
-        bind "Alt [" { PreviousSwapLayout; }
-        bind "Alt ]" { NextSwapLayout; }
+        bind "Ctrl +" { Resize "Increase"; }
+        bind "Ctrl -" { Resize "Decrease"; }
+        bind "Ctrl =" { Resize "Increase"; }
+        bind "Ctrl o" { PreviousSwapLayout; }
         bind "Ctrl g" { SwitchToMode "locked"; }
         bind "Alt h" { MoveFocusOrTab "left"; }
         bind "Alt j" { MoveFocus "down"; }
         bind "Alt k" { MoveFocus "up"; }
         bind "Alt l" { MoveFocusOrTab "right"; }
-        bind "Alt n" { NewPane; }
+        bind "Ctrl n" { NewPane; }
     }
     shared_except "locked" "session" {
         bind "Ctrl x" { SwitchToMode "session"; }
     }
     shared_except "locked" "renametab" {
-        bind "Alt r" { SwitchToMode "renametab"; }
+        bind "Ctrl r" { SwitchToMode "renametab"; }
     }
     shared_except "locked" "scroll" {
         bind "Ctrl s" { SwitchToMode "scroll"; }
@@ -225,7 +224,7 @@ simplified_ui false
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "nord"
+// theme "oh-lucky"
  
 // Choose the base input mode of zellij.
 // Default: normal
@@ -254,7 +253,129 @@ theme "nord"
 // The folder in which Zellij will look for themes
 // (Requires restart)
 // 
+themes {
+    oh_lucy {
+        text_unselected {
+            base 223 224 234
+            background 27 29 38
+            emphasis_0 232 90 132
+            emphasis_1 137 190 183
+            emphasis_2 148 221 142
+            emphasis_3 216 149 199
+        }
+        text_selected {
+            base 223 224 234
+            background 43 49 59
+            emphasis_0 232 90 132
+            emphasis_1 137 190 183
+            emphasis_2 148 221 142
+            emphasis_3 216 149 199
+        }
+        ribbon_selected {
+            base 27 29 38
+            background 148 221 142
+            emphasis_0 232 90 132
+            emphasis_1 232 90 132
+            emphasis_2 216 149 199
+            emphasis_3 126 183 230
+        }
+        ribbon_unselected {
+            base 27 29 38
+            background 223 224 234
+            emphasis_0 232 90 132
+            emphasis_1 223 224 234
+            emphasis_2 126 183 230
+            emphasis_3 216 149 199
+        }
+        table_title {
+            base 148 221 142
+            background 0 0 0
+            emphasis_0 232 90 132
+            emphasis_1 137 190 183
+            emphasis_2 148 221 142
+            emphasis_3 216 149 199
+        }
+        table_cell_selected {
+            base 223 224 234
+            background 43 49 59
+            emphasis_0 232 90 132
+            emphasis_1 137 190 183
+            emphasis_2 148 221 142
+            emphasis_3 216 149 199
+        }
+        table_cell_unselected {
+            base 223 224 234
+            background 27 29 38
+            emphasis_0 232 90 132
+            emphasis_1 137 190 183
+            emphasis_2 148 221 142
+            emphasis_3 216 149 199
+        }
+        list_selected {
+            base 223 224 234
+            background 43 49 59
+            emphasis_0 232 90 132
+            emphasis_1 137 190 183
+            emphasis_2 148 221 142
+            emphasis_3 216 149 199
+        }
+        list_unselected {
+            base 223 224 234
+            background 27 29 38
+            emphasis_0 232 90 132
+            emphasis_1 137 190 183
+            emphasis_2 148 221 142
+            emphasis_3 216 149 199
+        }
+        frame_selected {
+            base 148 221 142
+            background 0 0 0
+            emphasis_0 232 90 132
+            emphasis_1 137 190 183
+            emphasis_2 216 149 199
+            emphasis_3 0 0 0
+        }
+        frame_highlight {
+            base 232 90 132
+            background 0 0 0
+            emphasis_0 216 149 199
+            emphasis_1 232 90 132
+            emphasis_2 232 90 132
+            emphasis_3 232 90 132
+        }
+        exit_code_success {
+            base 148 221 142
+            background 0 0 0
+            emphasis_0 137 190 183
+            emphasis_1 27 29 38
+            emphasis_2 216 149 199
+            emphasis_3 126 183 230
+        }
+        exit_code_error {
+            base 232 90 132
+            background 0 0 0
+            emphasis_0 233 210 108
+            emphasis_1 0 0 0
+            emphasis_2 0 0 0
+            emphasis_3 0 0 0
+        }
+        multiplayer_user_colors {
+            player_1 216 149 199
+            player_2 126 183 230
+            player_3 0 0 0
+            player_4 233 210 108
+            player_5 137 190 183
+            player_6 0 0 0
+            player_7 232 90 132
+            player_8 0 0 0
+            player_9 0 0 0
+            player_10 0 0 0
+        }
+    }
+}
+
 // theme_dir "/home/dgieras/.config/zellij/themes/"
+theme "oh_lucy"
  
 // Toggle enabling the mouse mode.
 // On certain configurations, or terminals this could
@@ -308,7 +429,7 @@ on_force_close "detach"
 // copy_command "wl-copy"                    // wayland
 // copy_command "pbcopy"                     // osx
 // 
-copy_command "wl-copy"
+copy_command "pbcopy"
  
 // Choose the destination for copied text
 // Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
